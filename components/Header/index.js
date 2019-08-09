@@ -30,4 +30,10 @@ const weather = document.createElement('span');
 weather.classList.add('temp');
 weather.textContent = `98${deg}`;
 
+header.appendChild(date);
+header.appendChild(title);
+header.appendChild(weather);
+
+return header;
+
 })
