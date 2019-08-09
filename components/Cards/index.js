@@ -1,3 +1,7 @@
+
+window.addEventListener('load', function() {
+
+
 // STEP 3: Create Article cards.
 // -----------------------
 // Send an HTTP GET request to the following address: https://lambda-times-backend.herokuapp.com/articles
@@ -17,3 +21,6 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+
+})
