@@ -21,7 +21,7 @@ header.classList.add('header');
 
 const date = document.createElement('span');
 date.classList.add('date');
-date.textContent = "March 28th, 2019";
+date.textContent = "Smarch 28th, 2019";
 
 const title = document.createElement('h1');
 title.textContent = "Lambda Times";
