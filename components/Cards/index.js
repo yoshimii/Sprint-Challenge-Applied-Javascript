@@ -19,12 +19,46 @@ window.addEventListener('load', function() {
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
-axios.get("https://lambda-times-backend.herokuapp.com/articles")
-.then((response)=> {
-    this.console.log(response);
-})
+
+// axios.get("https://lambda-times-backend.herokuapp.com/articles")
+// .then((response)=> {
+//     response.data.articles.bootstrap.forEach(topic => {
 
 
+        
+//     });
+//     return response
+// })
+
+function ArticleCard(article){
+
+    let newCard = document.createElement('div');
+    card.classList.add('card');
+
+    let headline = documen.createElement('div');
+    headline.classList.add('headline');
+    headline.textContent = article.headline;
+
+    let author = document.createElement('div');
+    author.classList.add('author');
+
+    let imgContainer = document.createElement('div');
+    imgContainer.classList.add(".img-container");
+    
+    let photo = document.createElement('img');
+    photo.src = article.authorPhoto;
+
+    let by = document.createElement('span');
+    by.textContent = `By ${aricle.authorName}`
+
+    newCard.appendChild(headline);
+    newCard.appendChild(author);
+    author.appendChild(imgContainer);
+    imgContainer.appendChild(photo);
+    author.appendChild(by);
+
+    return newCard();
+}
 
 
 })
