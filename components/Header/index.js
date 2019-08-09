@@ -1,3 +1,6 @@
+window.addEventListener('load', function() {
+
+
 // STEP 1: Create a header component.
 // -----------------------
 // Using a function create the component you see below:
@@ -9,4 +12,9 @@
 //  </div >
 // And add it to the DOM in the .headerContainer component
 
+const headerContainer = document.querySelector(".header-container");
+headerContainer.appendChild(Header());
+
 function Header() {}
+
+})
