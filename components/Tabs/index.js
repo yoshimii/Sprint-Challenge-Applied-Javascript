@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
 //    <div class="tab">topic here</div>
 
 const tabDiv = document.querySelector('.topics')
-
+//get topics from lambda news site
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
 .then((response)=> {
     response.data.topics.forEach(topic => {//create div and append to parent for each element
@@ -24,6 +24,4 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
 })
 
 
-
-
-})
+})//event listener

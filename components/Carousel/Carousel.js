@@ -24,10 +24,10 @@ let carousel  = document.createElement('div');
 carousel.classList.add('carousel');
 
 let leftBtn = document.createElement('div');
-leftBtn.classList.add('left-button');
+leftBtn.classList.add('left-button--prev', 'prev');
 
 let rightBtn = document.createElement('div');
-rightBtn.classList.add('right-button');
+rightBtn.classList.add('right-button--next', 'next');
 
 let image1 = document.createElement('img');
 image1.classList.add('carousel-photo', 'initial');

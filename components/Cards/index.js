@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
 // STEP 3: Create Article cards.
 // -----------------------
 // Send an HTTP GET request to the following address: https://lambda-times-backend.herokuapp.com/articles
-// Stduy the response data you get back, closely.
+// Study the response data you get back, closely.
 // You will be creating a component for each 'article' in the list.
 // This won't be as easy as just iterating over an array though.
 // Create a function that will programmatically create the following DOM component:
@@ -20,50 +20,53 @@ window.addEventListener('load', function() {
 //
 // Create a card for each of the articles and add the card to the DOM.
 let entryPoint = document.querySelector('.cards-container')
-
+//get articles for all topics first: bootstrap
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
 .then((response)=> {
-    this.console.log(response)
+    
     response.data.articles.bootstrap.forEach(topic => {
         let newArticle = ArticleCard(topic);
         entryPoint.appendChild(newArticle);        
     });
     return response
-})
+})//javscript
 .then((response)=> {
-    this.console.log(response)
+
     response.data.articles.javascript.forEach(topic => {
         let newArticle = ArticleCard(topic);
         entryPoint.appendChild(newArticle);        
     });
     return response
-})
+})//jquery
 .then((response)=> {
-    this.console.log(response)
+    
     response.data.articles.jquery.forEach(topic => {
         let newArticle = ArticleCard(topic);
         entryPoint.appendChild(newArticle);        
     });
     return response
-})
+})//node
 .then((response)=> {
-    this.console.log(response)
+    
     response.data.articles.node.forEach(topic => {
         let newArticle = ArticleCard(topic);
         entryPoint.appendChild(newArticle);        
     });
     return response
-})
+})//technology
 .then((response)=> {
-    this.console.log(response)
+    
     response.data.articles.technology.forEach(topic => {
         let newArticle = ArticleCard(topic);
         entryPoint.appendChild(newArticle);        
     });
     return response
+})//error catch
+.catch((err)=> {
+    this.console.log(error)
 })
-
-function ArticleCard(article){
+//
+function ArticleCard(article){//creates cards for all topics
 
     let newCard = document.createElement('div');
     newCard.classList.add('card');
