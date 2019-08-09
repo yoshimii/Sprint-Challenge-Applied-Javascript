@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
 const headerContainer = document.querySelector(".header-container");
 headerContainer.appendChild(Header());
 
-function Header() {}
+function Header() {
 const deg = `\u00B0`;
 const header = document.createElement('div');
 header.classList.add('header');
@@ -35,5 +35,7 @@ header.appendChild(title);
 header.appendChild(weather);
 
 return header;
+}
+
 
 })
