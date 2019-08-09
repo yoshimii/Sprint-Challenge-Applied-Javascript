@@ -1,3 +1,4 @@
+window.addEventListener('load', function(){
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to write a function that creates the carousel component, you will find the HTML below.
     2. You will need to grab a reference to all of the images
@@ -29,7 +30,7 @@ let rightBtn = document.createElement('div');
 rightBtn.classList.add('right-button');
 
 let image1 = document.createElement('img');
-image1.classList.add('carousel-photo');
+image1.classList.add('carousel-photo', 'initial');
 image1.src = "./assets/carousel/mountains.jpeg"
 
 let image2 = document.createElement('img');
@@ -44,7 +45,12 @@ let image4 = document.createElement('img');
 image4.classList.add('carousel-photo');
 image4.src = "./assets/carousel/turntable.jpeg"
 
-
 carouselWrapper.appendChild(carousel);
-carousel.appendChild()
+carousel.appendChild(leftBtn);
+carousel.appendChild(image1);
+carousel.appendChild(image2);
+carousel.appendChild(image3);
+carousel.appendChild(image4);
+carousel.appendChild(rightBtn);
 
+})
