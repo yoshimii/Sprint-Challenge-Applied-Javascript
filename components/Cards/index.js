@@ -19,23 +19,24 @@ window.addEventListener('load', function() {
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+let entryPoint = document.querySelector('.cards-container')
 
-// axios.get("https://lambda-times-backend.herokuapp.com/articles")
-// .then((response)=> {
-//     response.data.articles.bootstrap.forEach(topic => {
-
-
-        
-//     });
-//     return response
-// })
+axios.get("https://lambda-times-backend.herokuapp.com/articles")
+.then((response)=> {
+    this.console.log(response)
+    response.data.articles.bootstrap.forEach(topic => {
+        let newArticle = ArticleCard(topic);
+        entryPoint.appendChild(newArticle);        
+    });
+    return response
+})
 
 function ArticleCard(article){
 
     let newCard = document.createElement('div');
-    card.classList.add('card');
+    newCard.classList.add('card');
 
-    let headline = documen.createElement('div');
+    let headline = document.createElement('div');
     headline.classList.add('headline');
     headline.textContent = article.headline;
 
@@ -49,7 +50,7 @@ function ArticleCard(article){
     photo.src = article.authorPhoto;
 
     let by = document.createElement('span');
-    by.textContent = `By ${aricle.authorName}`
+    by.textContent = `By ${article.authorName}`
 
     newCard.appendChild(headline);
     newCard.appendChild(author);
@@ -57,7 +58,7 @@ function ArticleCard(article){
     imgContainer.appendChild(photo);
     author.appendChild(by);
 
-    return newCard();
+    return newCard;
 }
 
 
