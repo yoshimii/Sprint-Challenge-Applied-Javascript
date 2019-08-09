@@ -37,5 +37,4 @@ header.appendChild(weather);
 return header;
 }
 
-
 })
